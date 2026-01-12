@@ -1,0 +1,32 @@
+{
+  "type": "embers:alchemy",
+  "aspects": [
+    {
+      "tag": "embers:aspectus/silver"
+    },
+    {
+      "tag": "embers:aspectus/lead"
+    }
+  ],
+  "inputs": [
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:moss_block"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "item": "minecraft:oak_leaves"
+  },
+  "tablet": {
+    "item": "embersdelight:pig_tail"
+  }
+}

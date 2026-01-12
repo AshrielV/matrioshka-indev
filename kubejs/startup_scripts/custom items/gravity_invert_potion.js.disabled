@@ -1,0 +1,7 @@
+MoreJSEvents.addBrewing(event => {
+    event.addBrewing(
+        Item.of('enlightened_end:stardust'),
+        Item.of('minecraft:potion', '{Potion:"apotheosis:levitation"}'),
+        Item.of('minecraft:potion', '{CustomPotionColor:10017154,CustomPotionEffects:[{Ambient:0b,Amplifier:0b,CurativeItems:[{Count:1b,id:"minecraft:milk_bucket"}],Duration:600,Id:243,ShowIcon:1b,ShowParticles:1b,"forge:id":"gravitychanger:invert"}]}')
+    );
+});

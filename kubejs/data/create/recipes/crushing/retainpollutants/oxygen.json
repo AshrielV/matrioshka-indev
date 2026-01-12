@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "adpother:oxygen"
+    }
+  ],
+  "processingTime": 20,
+  "results": [
+    {
+      "chance": 1.0,
+      "item": "adpother:oxygen"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "blazinghot:casting",
+  "conditions": [
+    {
+      "type": "blazinghot:legacy_fluid_amounts",
+      "value": false
+    }
+  ],
+  "coolingDuration": 150,
+  "ingredients": [
+    {
+      "item": "blazinghot:porcelain_ingot_mold"
+    },
+    {
+      "amount": 90,
+      "fluidTag": "forge:molten_silver"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "embers:silver_ingot"
+    }
+  ]
+}

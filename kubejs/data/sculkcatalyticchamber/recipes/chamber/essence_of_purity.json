@@ -1,0 +1,25 @@
+{
+  "type": "sculkcatalyticchamber:chamber",
+  "heatRequirement": "heated",
+  "topIngredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "bottomIngredients": [
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "catalysts": [
+    {
+      "tag": "forge:foods/fruit"
+    }
+  ],
+  "chances": 0.25,
+  "results": [
+    {
+      "item": "sculkhorde:essence_of_purity"
+    }
+  ]
+}

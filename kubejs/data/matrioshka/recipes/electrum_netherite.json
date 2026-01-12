@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:netherite_scrap"
+        },
+        {
+            "item": "minecraft:netherite_scrap"
+        },
+        {
+            "item": "minecraft:netherite_scrap"
+        },
+        {
+            "item": "minecraft:netherite_scrap"
+        },
+        {
+            "item": "createaddition:electrum_ingot"
+        },
+        {
+            "item": "createaddition:electrum_ingot"
+        },
+        {
+            "item": "createaddition:electrum_ingot"
+        },
+        {
+            "item": "createaddition:electrum_ingot"
+        }
+    ],
+    "result": {
+        "item": "minecraft:netherite_ingot",
+        "count": 1
+    }
+}

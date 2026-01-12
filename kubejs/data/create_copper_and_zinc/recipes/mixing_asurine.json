@@ -1,0 +1,28 @@
+{
+	"type": "create:mixing",
+	"ingredients": [
+	  {
+		"item": "minecraft:clay_ball"
+	  },
+	  {
+		"item": "minecraft:clay_ball"
+	  },
+	  {
+		"item": "minecraft:clay_ball"
+	  },
+	  {
+		"item": "minecraft:flint"
+	  },
+	  {
+		"fluid": "minecraft:water",
+		"nbt": {},
+		"amount": 250
+	  }
+	],
+	"results": [
+	  {
+		"item": "create:asurine",
+		"count": 1
+	  }
+	]
+  }

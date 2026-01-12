@@ -1,0 +1,50 @@
+// Detect scraping wax and reward a wax lump
+BlockEvents.rightClicked(event => {
+    const { block, item, player, level } = event;
+
+    // Only trigger on server side
+    if (level.isClientSide()) return;
+
+    // Only trigger if player is holding an axe
+    if (!item || !item.getToolTypes().contains('axe')) return;
+
+    // Check if block is waxed copper
+    const waxedBlocks = [
+        'minecraft:waxed_copper_block',
+        'minecraft:waxed_exposed_copper',
+        'minecraft:waxed_weathered_copper',
+        'minecraft:waxed_oxidized_copper',
+        'minecraft:waxed_cut_copper',
+        'minecraft:waxed_exposed_cut_copper',
+        'minecraft:waxed_weathered_cut_copper',
+        'minecraft:waxed_oxidized_cut_copper',
+        'minecraft:waxed_cut_copper_stairs',
+        'minecraft:waxed_exposed_cut_copper_stairs',
+        'minecraft:waxed_weathered_cut_copper_stairs',
+        'minecraft:waxed_oxidized_cut_copper_stairs',
+        'minecraft:waxed_cut_copper_slab',
+        'minecraft:waxed_exposed_cut_copper_slab',
+        'minecraft:waxed_weathered_cut_copper_slab',
+        'minecraft:waxed_oxidized_cut_copper_slab'
+    ];
+
+    if (!waxedBlocks.includes(block.id)) return;
+
+    // Delay to allow vanilla wax removal to complete
+    level.scheduleInTicks(1, () => {
+        const newBlock = block.blockState;
+        if (!newBlock.id.startsWith('minecraft:waxed')) {
+            // Spawn a wax lump item that pops out of the block
+            const pos = block.pos;
+            const entity = level.spawnItem('kubejs:wax_lump', pos.x + 0.5, pos.y + 0.5, pos.z + 0.5);
+
+            // Give it a little random velocity so it "flies" out
+            entity.setDeltaMovement(
+                (Math.random() - 0.5) * 0.2,
+                0.25,
+                (Math.random() - 0.5) * 0.2
+            );
+
+        }
+    });
+});

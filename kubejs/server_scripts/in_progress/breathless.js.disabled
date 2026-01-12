@@ -1,0 +1,53 @@
+const SUFFOCATION_EFFECT = 'enlightened_end:suffocation'
+const END_DIMENSION = 'minecraft:the_end'
+
+const DIVING_HELMETS = new Set([
+  'create:copper_diving_helmet',
+  'create:netherite_diving_helmet'
+])
+
+const WARNING_TEXT = `There's no air here! You're out of breath!`
+
+const warnedPlayers = new Map()
+
+function isInEnd(player) {
+  return player.level.dimension.toString() === END_DIMENSION
+}
+
+function hasDivingHelmet(player) {
+  const head = player.headArmorItem
+  if (!head || head.isEmpty()) return false
+  return DIVING_HELMETS.has(head.id)
+}
+
+function canBreathe(player) {
+  return player.potionEffects.has('minecraft:water_breathing') || hasDivingHelmet(player)
+}
+
+function applySuffocation(player) {
+  player.potionEffects.add(SUFFOCATION_EFFECT, 40, 0, false, false)
+
+  if (!warnedPlayers.get(player.uuid)) {
+    player.tell(Text.red(WARNING_TEXT))
+    warnedPlayers.set(player.uuid, true)
+  }
+}
+
+function clearSuffocation(player) {
+  player.potionEffects.remove(SUFFOCATION_EFFECT)
+  warnedPlayers.delete(player.uuid)
+}
+
+PlayerEvents.tick(event => {
+  const player = event.player
+  if (!player || player.level.isClientSide()) return
+  if (player.level.gameTime % 20 !== 0) return
+
+  if (!isInEnd(player)) {
+    clearSuffocation(player)
+    return
+  }
+
+  if (canBreathe(player)) clearSuffocation(player)
+  else applySuffocation(player)
+})

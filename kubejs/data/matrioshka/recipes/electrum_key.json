@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "c",
+        "C",
+        "C"
+    ],
+    "key": {
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "C": {
+            "item": "createaddition:electrum_nugget"
+        }
+    },
+    "result": {
+        "item": "supplementaries:key",
+        "count": 1
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "scguns:niter"
+    }
+  ],
+  "results": [
+    {
+      "count": 16,
+      "item": "adpother:nitrogen"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+// MoreJS: Register a brewing recipe
+MoreJSEvents.registerPotionBrewing(event => {
+    event.addPotionBrewing(
+        // Ingredient
+        Item.of('minecraft:fermented_spider_eye'),
+
+
+        Item.of('minecraft:potion', '{Potion:"gravitychanger:strength_decrease"}'),
+
+
+        Item.of('minecraft:potion', '{Potion:"gravitychanger:strength_increase"}')
+    );
+});

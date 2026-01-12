@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcd",
+    " e "
+  ],
+  "key": {
+    "a": {
+      "item": "create:powdered_obsidian"
+    },
+    "b": {
+      "item": "create:experience_nugget"
+    },
+    "c": {
+      "item": "minecraft:blaze_powder"
+    },
+    "d": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "e": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "item": "scguns:nitro_powder",
+    "count": 1
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "key": "bismuth_ingot",
+    "category": "metal",
+    "primary": 5.19,
+    "secondary": 1.9,
+    "tertiary": 7.5,
+    "durability": 1149,
+    "integrityCost": 2,
+    "integrityGain": 6,
+    "magicCapacity": 100,
+    "toolLevel": "minecraft:iron",
+    "toolEfficiency": 8,
+    "tints": {
+        "glyph": "908B94",
+        "texture": "908B94"
+    },
+    "textures": [
+        "heavy",
+        "metal"
+    ],
+    "material": {
+        "items": [ "enlightened_end:bismuth_ingot" ]
+    },
+    "attributes": {
+        "**tetra:draw_speed": -0.25
+    },
+    "effects" : {
+        "more_mod_tetra:fake_momentum": 25
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:stone"
+    }
+}

@@ -1,0 +1,91 @@
+{
+  "type": "create:sequenced_assembly",
+  "conditions": [
+    {
+      "type": "blazinghot:legacy_fluid_amounts",
+      "value": false
+    }
+  ],
+  "ingredient": {
+    "item": "blazinghot:stellar_blaze_apple"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "item": "blazinghot:enchanted_blaze_apple"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        },
+        {
+          "amount": 3240,
+          "fluidTag": "forge:molten_blaze_gold"
+        }
+      ],
+      "results": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        },
+        {
+          "item": "minecraft:nether_star"
+        }
+      ],
+      "results": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        }
+      ],
+      "results": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        }
+      ],
+      "results": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        }
+      ],
+      "results": [
+        {
+          "item": "blazinghot:burning_stellar_blaze_apple"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "blazinghot:burning_stellar_blaze_apple"
+  }
+}

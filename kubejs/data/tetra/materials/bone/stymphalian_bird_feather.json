@@ -1,0 +1,37 @@
+{
+  "key": "stymphalian_bird_feather",
+  "category": "bone",
+  "primary": 5.5,
+  "secondary": 1.1,
+  "tertiary": 6,
+  "durability": 500,
+  "integrityCost": 2,
+  "integrityGain": 6,
+  "magicCapacity": 104,
+  "toolLevel": "minecraft:iron",
+  "toolEfficiency": 7,
+  "tints": {
+    "glyph": "785c47",
+    "texture": "785c47"
+  },
+  "textures": [
+    "bone",
+    "crude"
+  ],
+  "material": {
+    "items": [
+      "iceandfire:stymphalian_bird_feather"
+    ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  },
+  "conditions":[
+    {
+      "type": "forge:mod_loaded",
+      "modid": "iceandfire"
+    }
+  ],
+  "features": ["featherweight"
+  ]
+}

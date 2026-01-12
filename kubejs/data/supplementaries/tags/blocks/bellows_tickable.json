@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"embers:melter","required":false},
+	{"id":"aetherworks:forge_vent","required":false}
+  ]
+}

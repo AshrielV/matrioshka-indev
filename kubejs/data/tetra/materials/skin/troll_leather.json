@@ -1,0 +1,37 @@
+{
+  "key": "troll_leather",
+  "category": "skin",
+  "primary": 6,
+  "secondary": 3,
+  "tertiary": 0.7,
+  "durability": 300,
+  "integrityCost": 1,
+  "integrityGain": 5,
+  "magicCapacity": 112,
+  "toolLevel": 0,
+  "toolEfficiency": 0,
+  "tints": {
+    "glyph": "343939",
+    "texture": "343939"
+  },
+  "textures": [
+    "crude",
+    "default"
+  ],
+  "material": {
+    "items": [
+      "iceandfire:troll_leather_forest",
+      "iceandfire:troll_leather_frost",
+      "iceandfire:troll_leather_mountain"
+    ]
+  },
+  "requiredTools": {
+    "cut": "minecraft:iron"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "alexsmobs"
+    }
+  ]
+}

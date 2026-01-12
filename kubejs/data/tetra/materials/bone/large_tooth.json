@@ -1,0 +1,38 @@
+{
+  "key": "large_tooth",
+  "category": "bone",
+  "primary": 5.5,
+  "secondary": 3.6,
+  "tertiary": 1,
+  "durability": 375,
+  "integrityCost": 2,
+  "integrityGain": 6,
+  "magicCapacity": 146,
+  "toolLevel": "minecraft:iron",
+  "toolEfficiency": 7,
+  "tints": {
+    "glyph": "6c645c",
+    "texture": "6c645c"
+  },
+  "textures": [
+    "bone",
+    "crude"
+  ],
+  "material": {
+    "items": [
+      "alexsmobs:bone_serpent_tooth",
+      "alexsmobs:shark_tooth",
+      "alexsmobs:cachalot_whale_tooth",
+      "alexsmobs:serrated_shark_tooth"
+    ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "alexsmobs"
+    }
+  ]
+}

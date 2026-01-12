@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"scguns:viventrum","required":false},
+    {"id":"scguns:supply_scamp","required":false}
+  ]
+}
+

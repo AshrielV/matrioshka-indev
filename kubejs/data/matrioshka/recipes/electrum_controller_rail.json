@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "c c",
+        "c/c",
+        "cCc"
+    ],
+    "key": {
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "C": {
+            "item": "create:electron_tube"
+        }
+    },
+    "result": {
+        "item": "create:controller_rail",
+        "count": 12
+    }
+}

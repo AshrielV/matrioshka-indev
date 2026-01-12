@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#c#",
+        "SSS"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone_torch"
+        },
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "S": {
+            "tag": "forge:stone"
+        }
+    },
+    "result": {
+        "item": "minecraft:comparator",
+        "count": 1
+    }
+}

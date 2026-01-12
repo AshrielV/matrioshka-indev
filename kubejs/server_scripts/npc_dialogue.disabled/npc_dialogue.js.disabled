@@ -1,0 +1,129 @@
+// Dialogue lines with delays (ticks)
+const DIALOGUE = [
+  { delay: 0,    text: "Hoho! So you've come to my little sanctuary, despite the unruliness of the neighbors." },
+  { delay: 150,  text: "The horde has taken a terrible toll upon the land. If you made it here, perhaps you are of some use after all." },
+  { delay: 300,  text: "It come from a vault made to contain it, deep underneath this mountain. Never trust a villager to do a dwarf's work, methinks." },
+  { delay: 500,  text: "Hoho, but you seem a capable sort. If you could cleanse these lands, you would have my thanks." },
+  { delay: 640,  text: "The corruption is strong magic — even my wards barely keep it at bay. You will need something potent to cure the vile heart of the horde." },
+  { delay: 800,  text: "Or so they say. Do as you will, noisy one. I will be here." },
+  { delay: 1200, text: "And close the gate on your way out!" }
+];
+
+// Idle chatter lines (randomly chosen)
+const IDLE_CHATTER = [
+  "Hoho…",
+  "Hmm…",
+  "Sculk subsumes, but cannot destroy.",
+  "Bah… corruption everywhere. Even the air tastes wrong.",
+  "I could use another bluff rod..."
+];
+
+// Player detection range
+const TRIGGER_RANGE = 6;
+
+// Cooldown between dialogue sequences (ticks)
+const COOLDOWN = 20 * 600; // 10 minutes
+
+// ✅ Correct event for 1.20.1
+EntityEvents.spawned(event => {
+  const npc = event.entity;
+
+  // Only run on your sculptor NPC
+  if (npc.type !== "mowziesmobs:sculptor") return;
+
+  // Only run on NPC-tagged sculptors
+  if (!npc.tags.contains("NPC")) return;
+
+  // Initialize cooldown
+  npc.persistentData.cooldown = 0;
+
+  npc.persistentData.idleCooldown = 0;
+
+  // Enable ticking
+  npc.setTicking(true);
+
+  // ✅ Define the tick function
+  npc.tick = e => {
+    const entity = e.entity;
+
+    // Tick down cooldown
+    if (entity.persistentData.cooldown > 0) {
+      entity.persistentData.cooldown--;
+      return;
+    }
+
+    // Find nearest player
+    const player = entity.level.getNearestPlayer(entity, TRIGGER_RANGE);
+    if (!player) return;
+
+    // If this player already heard this NPC, skip
+    if (player.persistentData[`heard_${entity.id}`]) return;
+
+    // Trigger dialogue
+    startDialogue(entity.level, entity);
+
+    // Reset cooldown
+    entity.persistentData.cooldown = COOLDOWN;
+
+// ----- Idle chatter -----
+
+// Tick down idle cooldown
+    if (entity.persistentData.idleCooldown > 0) {
+      entity.persistentData.idleCooldown--;
+    } else {
+      // 1% chance per tick to speak (adjust as needed)
+      if (Math.random() < 0.01) {
+
+        // Pick a random idle line
+        const line = IDLE_CHATTER[Math.floor(Math.random() * IDLE_CHATTER.length)];
+
+        // Send to all players within 20 blocks
+        const players = entity.level.players.filter(p =>
+          p.distanceTo(entity) <= 20 && p.isAlive()
+        );
+
+        players.forEach(p => {
+          p.tell([
+            { text: `[${entity.name.text}] `, color: "gold" },
+            { text: line, color: "white" }
+          ]);
+        });
+
+        // Reset idle cooldown (e.g., 30–60 seconds)
+        entity.persistentData.idleCooldown = 20 * (30 + Math.floor(Math.random() * 30));
+      }
+    }
+  };
+});
+
+// ✅ Dialogue scheduler
+function startDialogue(level, npc) {
+  DIALOGUE.forEach(line => {
+    level.server.scheduleInTicks(line.delay, () => {
+
+      // Get all players within 20 blocks of the NPC
+      const players = level.players.filter(p =>
+        p.distanceTo(npc) <= 20 && p.isAlive()
+      );
+
+      if (players.length === 0) return;
+
+      players.forEach(p => {
+        p.tell([
+          {
+            text: `[${npc.name.text}] `,
+            color: "gold"
+          },
+          {
+            text: line.text,
+            color: "white"
+          }
+        ]);
+
+		// Mark this NPC as heard for this player
+		p.persistentData[`heard_${npc.id}`] = true;
+      });
+
+    });
+  });
+}

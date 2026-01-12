@@ -1,0 +1,25 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:calcite"
+    }
+  ],
+  "processingTime": 150,
+  "results": [
+    {
+      "count": 2,
+      "item": "sculkhorde:calcite_clump"
+    },
+    {
+      "chance": 0.5,
+      "count": 2,
+      "item": "sculkhorde:calcite_clump"
+    },
+	    {
+      "chance": 0.5,
+      "count": 1,
+      "item": "minecraft:bone_meal"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+// === CONFIG ===
+var MAX_TILE_ENTITIES_PER_CHUNK = 200
+var WARNING_THRESHOLD = 160
+var WARNING_COOLDOWN_TICKS = 100  // 5 seconds
+
+// Per-chunk TE counts: { "dimension:cx,cz": number }
+var chunkTECounts = {}
+
+// Per-player last warning time: { uuid: gameTime }
+var lastWarning = {}
+
+// Queue of placement checks to run next tick
+var pendingPlacements = []
+
+
+// === HELPERS ===
+
+function chunkKey(level, pos) {
+  var cx = pos.x >> 4
+  var cz = pos.z >> 4
+  // dimension id is important if you have multiple worlds
+  return level.dimension + ":" + cx + "," + cz
+}
+
+function getChunkCount(key) {
+  var n = chunkTECounts[key]
+  return n ? n : 0
+}
+
+function setChunkCount(key, value) {
+  if (value <= 0) {
+    delete chunkTECounts[key]
+  } else {
+    chunkTECounts[key] = value
+  }
+}
+
+
+// === CAPTURE BLOCK PLACEMENT ===
+BlockEvents.placed(function (event) {
+  var level = event.level
+  var blockState = event.block
+  var player = event.player
+  var pos = blockState.pos
+
+  if (level.isClientSide()) return
+  if (!player) return
+
+  // Capture item now
+  var placedItem = event.item ? event.item.copy() : null
+
+  // Queue this placement for next tick
+  pendingPlacements.push({
+    level: level,
+    pos: pos,
+    player: player,
+    blockId: blockState.id,
+    item: placedItem
+  })
+})
+
+
+// === PROCESS QUEUED PLACEMENTS NEXT TICK ===
+ServerEvents.tick(function (event) {
+  if (pendingPlacements.length === 0) return
+
+  var jobs = pendingPlacements.slice()
+  pendingPlacements.length = 0
+
+  for (var i = 0; i < jobs.length; i++) {
+    var job = jobs[i]
+    var level = job.level
+    var pos = job.pos
+    var player = job.player
+    var blockId = job.blockId
+    var item = job.item
+
+    // If block already gone, skip
+    if (level.getBlock(pos).id === "minecraft:air") continue
+
+    // Check if this block actually has a tile entity
+    var te = level.getBlockEntity(pos)
+    if (!te) continue  // non-TE block; ignore
+
+    var key = chunkKey(level, pos)
+    var count = getChunkCount(key)
+    var newCount = count + 1
+
+    // === HARD LIMIT ===
+    if (newCount > MAX_TILE_ENTITIES_PER_CHUNK) {
+      // Don't increment; enforce limit instead
+
+      // Remove block
+      level.setBlock(pos, "minecraft:air")
+
+      // Refund item
+      if (item) {
+        player.give(item)
+      } else {
+        player.give(blockId)
+      }
+
+      player.displayClientMessage(
+        Text.red("Chunk tile entity limit (" + MAX_TILE_ENTITIES_PER_CHUNK + ") exceeded"),
+        true
+      )
+
+      continue
+    }
+
+    // Commit increment
+    setChunkCount(key, newCount)
+
+    // === GRACE WARNING ===
+    if (newCount >= WARNING_THRESHOLD && newCount < MAX_TILE_ENTITIES_PER_CHUNK) {
+      var now = level.gameTime
+      var last = lastWarning[player.uuid] || 0
+
+      if (now - last >= WARNING_COOLDOWN_TICKS) {
+        player.displayClientMessage(
+          Text.yellow("Warning: This chunk has " + newCount + " tile entities (limit " + MAX_TILE_ENTITIES_PER_CHUNK + ")"),
+          true
+        )
+        lastWarning[player.uuid] = now
+      }
+    }
+  }
+})
+
+
+// === DECREMENT COUNTS ON BREAK ===
+BlockEvents.broken(function (event) {
+  var level = event.level
+  var player = event.player
+  var pos = event.block.pos
+
+  if (level.isClientSide()) return
+
+  // We need to know if this block had a TE.
+  // In most cases, the TE still exists at break time.
+  var te = level.getBlockEntity(pos)
+  if (!te) return
+
+  var key = chunkKey(level, pos)
+  var count = getChunkCount(key)
+  if (count > 0) {
+    setChunkCount(key, count - 1)
+  }
+})

@@ -1,0 +1,19 @@
+// KubeJS Forge 1.20.1
+// Silverfish drop 0–2 embers:silver_nugget, scaled by Looting
+
+EntityEvents.dropLoot(event => {
+    if (!event.entity || event.entity.type !== 'minecraft:silverfish') return;
+
+    // Base drop range: 0–2
+    let base = Math.floor(Math.random() * 3); // 0, 1, or 2
+
+    // Looting bonus: +1 per level (you can change this)
+    let looting = event.getLootingLevel();
+    let bonus = looting > 0 ? looting : 0;
+
+    let total = base + bonus;
+
+    for (let i = 0; i < total; i++) {
+        event.addItem('embers:silver_nugget');
+    }
+});

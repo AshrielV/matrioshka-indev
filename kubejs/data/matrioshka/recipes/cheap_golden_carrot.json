@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#C#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "createaddition:electrum_nugget"
+        },
+        "C": {
+            "item": "minecraft:carrot"
+        }
+    },
+    "result": {
+        "item": "minecraft:golden_carrot",
+        "count": 1
+    }
+}

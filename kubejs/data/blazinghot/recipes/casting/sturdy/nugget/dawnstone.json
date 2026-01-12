@@ -1,0 +1,26 @@
+{
+  "type": "blazinghot:casting",
+  "conditions": [
+    {
+      "type": "blazinghot:legacy_fluid_amounts",
+      "value": false
+    }
+  ],
+  "coolingDuration": 36,
+  "ingredients": [
+    {
+      "item": "blazinghot:sturdy_nugget_mold"
+    },
+    {
+      "amount": 10,
+      "fluidTag": "forge:molten_dawnstone"
+    }
+  ],
+  "keepItem": true,
+  "processingTime": 12,
+  "results": [
+    {
+      "item": "embers:dawnstone_nugget"
+    }
+  ]
+}

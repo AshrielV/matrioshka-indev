@@ -1,0 +1,174 @@
+[
+  {
+    "conditions": [
+      {
+        "type": "forge:mod_loaded",
+        "modid": "iceandfire"
+      }
+    ],
+    "predicate": {
+      "items": [
+        "iceandfire:myrmex_desert_axe"
+      ]
+    },
+    "item": "tetra:modular_double",
+    "modules": {
+      "double/head_left": [
+        "double/basic_axe_left",
+        "basic_axe/myrmex_desert_chitin"
+      ],
+      "double/head_right": [
+        "double/butt_right",
+        "butt/myrmex_desert_chitin"
+      ],
+      "double/handle": [
+        "double/basic_handle",
+        "basic_handle/witherbone"
+      ]
+    }
+  },
+  {
+    "conditions": [
+      {
+        "type": "forge:mod_loaded",
+        "modid": "iceandfire"
+      }
+    ],
+    "predicate": {
+      "items": [
+        "iceandfire:myrmex_desert_hoe"
+      ]
+    },
+    "item": "tetra:modular_double",
+    "modules": {
+      "double/head_left": [
+        "double/hoe_left",
+        "hoe/myrmex_desert_chitin"
+      ],
+      "double/head_right": [
+        "double/butt_right",
+        "butt/myrmex_desert_chitin"
+      ],
+      "double/handle": [
+        "double/basic_handle",
+        "basic_handle/witherbone"
+      ]
+    }
+  },
+  {
+    "conditions": [
+      {
+        "type": "forge:mod_loaded",
+        "modid": "iceandfire"
+      }
+    ],
+    "predicate": {
+      "items": [
+        "iceandfire:myrmex_desert_pickaxe"
+      ]
+    },
+    "item": "tetra:modular_double",
+    "modules": {
+      "double/head_left": [
+        "double/basic_pickaxe_left",
+        "basic_pickaxe/myrmex_desert_chitin"
+      ],
+      "double/head_right": [
+        "double/basic_pickaxe_right",
+        "basic_pickaxe/myrmex_desert_chitin"
+      ],
+      "double/handle": [
+        "double/basic_handle",
+        "basic_handle/witherbone"
+      ]
+    }
+  },
+  {
+    "conditions": [
+      {
+        "type": "forge:mod_loaded",
+        "modid": "iceandfire"
+      }
+    ],
+    "predicate": {
+      "items": [
+        "iceandfire:myrmex_desert_shovel"
+      ]
+    },
+    "item": "tetra:modular_single",
+    "modules": {
+      "single/head": [
+        "single/basic_shovel",
+        "basic_shovel/myrmex_desert_chitin"
+      ],
+      "single/handle": [
+        "single/basic_handle",
+        "basic_handle/witherbone"
+      ]
+    }
+  },
+  {
+    "conditions": [
+      {
+        "type": "forge:mod_loaded",
+        "modid": "iceandfire"
+      }
+    ],
+    "predicate": {
+      "items": [
+        "iceandfire:myrmex_desert_sword"
+      ]
+    },
+    "item": "tetra:modular_sword",
+    "modules": {
+      "sword/blade": [
+        "sword/basic_blade",
+        "basic_blade/myrmex_desert_chitin"
+      ],
+      "sword/hilt": [
+        "sword/basic_hilt",
+        "basic_hilt/witherbone"
+      ],
+      "sword/pommel": [
+        "sword/decorative_pommel",
+        "decorative_pommel/myrmex_desert_chitin"
+      ],
+      "sword/guard": [
+        "sword/makeshift_guard",
+        "makeshift_guard/myrmex_desert_chitin"
+      ]
+    }
+  },
+  {
+    "conditions": [
+      {
+        "type": "forge:mod_loaded",
+        "modid": "iceandfire"
+      }
+    ],
+    "predicate": {
+      "items": [
+        "iceandfire:myrmex_desert_sword_venom"
+      ]
+    },
+    "item": "tetra:modular_sword",
+    "modules": {
+      "sword/blade": [
+        "sword/basic_blade",
+        "basic_blade/myrmex_desert_chitin"
+      ],
+      "sword/hilt": [
+        "sword/basic_hilt",
+        "basic_hilt/witherbone"
+      ],
+      "sword/pommel": [
+        "sword/decorative_pommel",
+        "decorative_pommel/myrmex_desert_chitin"
+      ],
+      "sword/guard": [
+        "sword/makeshift_guard",
+        "makeshift_guard/myrmex_desert_chitin"
+      ]
+    }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "sculkhorde:soulite_shard"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "item": "adpother:ozone"
+    }
+  ]
+}

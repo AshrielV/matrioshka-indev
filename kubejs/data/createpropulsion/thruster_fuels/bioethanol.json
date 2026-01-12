@@ -1,0 +1,5 @@
+{
+    "fluid": "createaddition:bioethanol",
+    "thrust_multiplier": 0.8,
+    "consumption_multiplier": 0.5
+}

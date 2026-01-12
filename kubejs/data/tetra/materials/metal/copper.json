@@ -1,0 +1,34 @@
+{
+	"replace": true,
+    "key": "copper",
+    "category": "metal",
+    "primary": 4,
+    "secondary": 4.2,
+    "tertiary": 2.5,
+    "durability": 180,
+    "integrityCost": 1,
+    "integrityGain": 5,
+    "magicCapacity": 78,
+    "toolLevel": "minecraft:iron",
+    "toolEfficiency": 5,
+    "effects": {
+        "fot:fe_store": 2240
+    },
+    "tints": {
+        "glyph": "copper_glyph",
+        "texture": "copper"
+    },
+    "textures": [
+        "metal",
+        "default"
+    ],
+    "material": {
+        "items": [ "minecraft:copper_ingot" ]
+    },
+    "improvements": {
+        "workable": 1
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:wood"
+    }
+}

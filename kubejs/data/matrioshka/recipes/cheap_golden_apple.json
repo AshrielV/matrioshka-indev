@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " c ",
+        "cAc",
+        " c "
+    ],
+    "key": {
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "A": {
+            "item": "minecraft:apple"
+        }
+    },
+    "result": {
+        "item": "minecraft:golden_apple",
+        "count": 1
+    }
+}

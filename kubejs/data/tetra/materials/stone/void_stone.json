@@ -1,0 +1,36 @@
+{
+    "key": "void_stone",
+    "category": "stone",
+    "primary": 7,
+    "secondary": 6,
+    "tertiary": 0,
+    "durability": 1500,
+    "integrityCost": 2,
+    "integrityGain": 4,
+    "magicCapacity": 112,
+    "toolLevel": "minecraft:netherite",
+    "toolEfficiency": 9.5,
+    "tints": {
+        "glyph": "370f65",
+        "texture": "370f65"
+    },
+    "textures": [
+        "grainy",
+        "crude",
+        "default"
+    ],
+    "material": {
+        "items": [
+            "cataclysm:void_stone"
+        ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:diamond"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "cataclysm"
+        }
+    ]
+}

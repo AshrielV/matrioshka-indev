@@ -1,0 +1,12 @@
+{
+  "type": "ars_additions:locate_structure",
+  "augments": [
+    {
+      "key": "create:blaze_burner"
+    }
+  ],
+  "id": "ars_additions:burning_arena",
+  "structure": {
+    "key": "cataclysm:burning_arena"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "sculkcatalyticchamber:chamber",
+  "heatRequirement": "heated",
+  "topIngredients": [
+    {
+      "tag": "forge:gems"
+    }
+  ],
+  "bottomIngredients": [
+    {
+      "item": "minecraft:calcite"
+    }
+  ],
+  "catalysts": [
+    {
+      "amount": 50,
+      "fluid": "create_enchantment_industry:experience",
+      "nbt": {}
+    }
+  ],
+  "chances": 1.0,
+  "results": [
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ]
+}

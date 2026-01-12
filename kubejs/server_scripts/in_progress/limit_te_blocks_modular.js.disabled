@@ -1,0 +1,31 @@
+const MAX_TILE_ENTITIES_PER_CHUNK = 20
+const LIMITED_TE_BLOCKS = [
+  'modid:block1',
+  'modid:block2'
+]
+
+BlockEvents.place(event => {
+  const { level, block, player } = event
+  if (level.isClientSide()) return
+
+  if (!LIMITED_TE_BLOCKS.includes(block.id)) return
+
+  const pos = block.pos
+  const chunkX = pos.x >> 4
+  const chunkZ = pos.z >> 4
+
+  let count = 0
+  for (const te of level.blockEntities) {
+    const teChunkX = te.blockPos.x >> 4
+    const teChunkZ = te.blockPos.z >> 4
+    if (teChunkX === chunkX && teChunkZ === chunkZ) count++
+  }
+
+  if (count >= MAX_TILE_ENTITIES_PER_CHUNK) {
+    event.cancel()
+    player.displayClientMessage(
+      Text.red(`Too many machines in this chunk (${MAX_TILE_ENTITIES_PER_CHUNK})`),
+      true
+    )
+  }
+})

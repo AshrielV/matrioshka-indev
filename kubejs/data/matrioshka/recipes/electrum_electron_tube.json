@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#c#",
+        " C "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone"
+        },
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "C": {
+            "tag": "forge:plates/iron"
+        }
+    },
+    "result": {
+        "item": "create:electron_tube",
+        "count": 1
+    }
+}

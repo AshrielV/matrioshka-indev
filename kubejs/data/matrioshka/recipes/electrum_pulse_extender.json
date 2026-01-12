@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  #",
+        "RC#",
+        "SSS"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone_torch"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "C": {
+            "item": "createaddition:electrum_sheet"
+        },
+        "S": {
+            "item": "minecraft:stone"
+        }
+    },
+    "result": {
+        "item": "create:pulse_extender",
+        "count": 1
+    }
+}

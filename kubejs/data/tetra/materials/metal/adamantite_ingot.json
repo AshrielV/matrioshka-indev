@@ -1,0 +1,36 @@
+{
+    "key": "adamantite",
+    "category": "metal",
+    "primary": 7.74,
+    "secondary": 3.2,
+    "tertiary": 4.5,
+    "durability": 1512,
+    "integrityCost": 2,
+    "integrityGain": 8,
+    "magicCapacity": 90,
+    "toolLevel": "minecraft:netherite",
+    "toolEfficiency": 9,
+    "tints": {
+        "glyph": "1A5FFF",
+        "texture": "1A5FFF"
+    },
+    "textures": [
+        "heavy",
+        "metal"
+    ],
+    "material": {
+        "tag": "forge:ingots/adamantite"
+    },
+    "effects" : {
+        "more_mod_tetra:fake_insatiable": 1
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "enlightened_end"
+        }
+    ]
+}

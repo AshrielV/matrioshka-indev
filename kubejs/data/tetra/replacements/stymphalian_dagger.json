@@ -1,0 +1,34 @@
+[
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "iceandfire"
+    }
+  ],
+  "predicate": {
+    "items": [
+      "iceandfire:stymphalian_bird_dagger"
+    ]
+  },
+  "item": "tetra:modular_sword",
+  "modules": {
+    "sword/blade": [
+      "sword/short_blade",
+      "short_blade/stymphalian_bird_feather"
+    ],
+    "sword/hilt": [
+      "sword/basic_hilt",
+      "basic_hilt/stick"
+    ],
+    "sword/pommel": [
+      "sword/decorative_pommel",
+      "decorative_pommel/stymphalian_bird_feather"
+    ],
+    "sword/guard": [
+      "sword/makeshift_guard",
+      "makeshift_guard/stymphalian_bird_feather"
+    ]
+  }
+}
+]

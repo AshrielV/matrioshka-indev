@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "create:experience_nugget"
+    },
+    "b": {
+      "item": "minecraft:deepslate"
+    }
+  },
+  "result": {
+    "item": "minecraft:sculk",
+    "count": 9
+  }
+}

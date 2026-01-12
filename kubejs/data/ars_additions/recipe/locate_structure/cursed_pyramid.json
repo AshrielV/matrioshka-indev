@@ -1,0 +1,12 @@
+{
+  "type": "ars_additions:locate_structure",
+  "augments": [
+    {
+      "key": "minecraft:gold_block"
+    }
+  ],
+  "id": "ars_additions:cursed_pyramid",
+  "structure": {
+    "key": "cataclysm:cursed_pyramid"
+  }
+}

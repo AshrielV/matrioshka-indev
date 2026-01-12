@@ -1,0 +1,1 @@
+Essentially, these are either merging duplicates of the same material from tetra material mods (via copying logic + hiding + replacing) or adding some new tweaks and features to existing metals (electricty for relevant metals, netherite rework). Additionally, adds scguns materials. 

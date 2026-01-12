@@ -1,0 +1,25 @@
+{
+  "type": "blazinghot:casting",
+  "conditions": [
+    {
+      "type": "blazinghot:legacy_fluid_amounts",
+      "value": false
+    }
+  ],
+  "coolingDuration": 36,
+  "ingredients": [
+    {
+      "item": "blazinghot:porcelain_nugget_mold"
+    },
+    {
+      "amount": 10,
+      "fluidTag": "forge:molten_lead"
+    }
+  ],
+  "processingTime": 12,
+  "results": [
+    {
+      "item": "embers:lead_nugget"
+    }
+  ]
+}

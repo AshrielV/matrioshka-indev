@@ -1,0 +1,21 @@
+{
+  "replace": false, 
+  "values": [
+    "embers:molten_brass",
+    "embers:molten_copper",
+    "embers:molten_dawnstone",
+    "embers:molten_electrum",
+    "embers:molten_gold",
+    "embers:molten_iron",
+    "embers:molten_lead",
+    "embers:molten_nickel",
+    "embers:molten_silver",
+    "embers:molten_zinc",
+    "blazinghot:molten_brass",
+    "blazinghot:molten_copper",
+    "blazinghot:molten_gold",
+    "blazinghot:molten_iron",
+    "blazinghot:molten_zinc",
+    "starbunclemania:source_fluid"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "ingredients": [
+    {
+      "item": "iceandfire:dragonegg_electric"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dragon_egg",
+    "count": 1
+  },
+  "time": 600
+}

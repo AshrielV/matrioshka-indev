@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","pattern":["AAA","BCD","AAA"],"key":{"A":{"item":"minecraft:cobblestone"},"B":{"item":"minecraft:redstone"},"C":{"item":"minecraft:copper_ingot"},"D":{"item":"minecraft:quartz"}},"result":{"item":"minecraft:observer","count":1}}

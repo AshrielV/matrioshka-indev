@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "create:schematic"
+        }
+    ],
+    "result": {
+        "item": "create:empty_schematic",
+        "count": 1
+    }
+}

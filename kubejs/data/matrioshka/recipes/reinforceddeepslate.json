@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#D#",
+        "DSD",
+        "#D#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_block"
+        },
+        "D": {
+            "item": "minecraft:deepslate"
+        },
+        "S": {
+            "item": "scguns:nether_star_fragment"
+        }
+    },
+    "result": {
+        "item": "minecraft:reinforced_deepslate",
+        "count": 1
+    }
+}

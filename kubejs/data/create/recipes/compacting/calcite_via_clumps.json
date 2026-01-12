@@ -1,0 +1,22 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "sculkhorde:calcite_clump"
+    },
+    {
+      "item": "sculkhorde:calcite_clump"
+    },
+    {
+      "item": "sculkhorde:calcite_clump"
+    },
+    {
+      "item": "sculkhorde:calcite_clump"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:calcite"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " c ",
+        "CcC",
+        "CCC"
+    ],
+    "key": {
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "C": {
+            "item": "createaddition:electrum_sheet"
+        }
+    },
+    "result": {
+        "item": "blazinghot:blaze_whisk",
+        "count": 1
+    }
+}

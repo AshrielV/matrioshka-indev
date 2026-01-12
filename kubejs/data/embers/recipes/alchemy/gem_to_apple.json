@@ -1,0 +1,23 @@
+{
+  "type": "embers:alchemy",
+  "aspects": [
+    {
+      "tag": "embers:aspectus/copper"
+    }
+  ],
+  "inputs": [
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "minecraft:apple"
+  },
+  "tablet": {
+    "tag": "c:gems"
+  }
+}

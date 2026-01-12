@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "iceandfire:ectoplasm"
+    }
+  ],
+  "results": [
+    {
+      "id": "sculkhorde:crying_souls"
+    }
+  ]
+}

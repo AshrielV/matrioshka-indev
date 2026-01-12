@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "scguns:bat_guano"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "item": "adpother:methane"
+    }
+  ]
+}

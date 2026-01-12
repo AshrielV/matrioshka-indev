@@ -1,0 +1,27 @@
+{
+  "type": "sculkcatalyticchamber:chamber",
+  "heatRequirement": "heated",
+  "topIngredients": [
+    {
+      "item": "sculkhorde:soulite_shard"
+    }
+  ],
+  "bottomIngredients": [
+    {
+      "item": "soul_sand"
+    }
+  ],
+  "catalysts": [
+    {
+      "amount": 250,
+      "fluid": "create_wizardry:blood",
+      "nbt": {}
+    }
+  ],
+  "chances": 1.0,
+  "results": [
+    {
+      "item": "sculkhorde:crying_souls"
+    }
+  ]
+}

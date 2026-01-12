@@ -1,0 +1,25 @@
+{
+  "type": "sculkcatalyticchamber:chamber",
+  "heatRequirement": "heated",
+  "topIngredients": [
+    {
+      "item": "minecraft:bone_meal"
+    }
+  ],
+  "bottomIngredients": [
+    {
+      "tag": "c:stones"
+    }
+  ],
+  "catalysts": [
+    {
+      "item": "sculkhorde:calcite_clump"
+    }
+  ],
+  "chances": 0.5,
+  "results": [
+    {
+      "item": "minecraft:calcite"
+    }
+  ]
+}

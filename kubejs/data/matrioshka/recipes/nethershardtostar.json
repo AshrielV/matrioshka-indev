@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "###",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "scguns:nether_star_fragment"
+        }
+    },
+    "result": {
+        "item": "minecraft:nether_star",
+        "count": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_G_",
+        "ccc",
+        "cVc"
+    ],
+    "key": {
+        "_": {
+            "item": "minecraft:spruce_slab"
+        },
+        "G": {
+            "item": "minecraft:smooth_stone_slab"
+        },
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "V": {
+            "item": "minecraft:gold_nugget"
+        }
+    },
+    "result": {
+        "item": "minecraft:bell",
+        "count": 1
+    }
+}

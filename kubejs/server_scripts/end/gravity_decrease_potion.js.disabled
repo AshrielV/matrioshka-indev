@@ -1,0 +1,13 @@
+// MoreJS: Register a brewing recipe
+MoreJSEvents.registerPotionBrewing(event => {
+    event.addPotionBrewing(
+        // Ingredient
+        Item.of('enlightened_end:stardust'),
+
+
+        Item.of('minecraft:potion', '{Potion:"minecraft:slow_falling"}'),
+
+
+        Item.of('minecraft:potion', '{Potion:"gravitychanger:strength_decrease"}')
+    );
+});

@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "amount": 500,
+      "fluid": "minecraft:water",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "count": 16,
+      "item": "adpother:oxygen"
+    },
+    {
+      "count": 16,
+      "item": "adpother:hydrogen"
+    }
+  ]
+}

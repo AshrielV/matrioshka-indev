@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#c#",
+        "cNc",
+        "cIc"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald"
+        },
+        "c": {
+            "item": "createaddition:electrum_ingot"
+        },
+        "N": {
+            "item": "minecraft:nether_star"
+        },
+        "I": {
+            "item": "iceandfire:ectoplasm"
+        }
+    },
+    "result": {
+        "item": "minecraft:totem_of_undying",
+        "count": 1
+    }
+}
