@@ -1,0 +1,25 @@
+{
+  "name": "matrioshka-indev-static-render",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render:static": "node tools/render-static.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.41.0"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshrielV/matrioshka-indev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshrielV/matrioshka-indev/issues"
+  },
+  "homepage": "https://github.com/AshrielV/matrioshka-indev#readme"
+}
